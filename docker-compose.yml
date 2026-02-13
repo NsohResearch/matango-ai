@@ -1,0 +1,62 @@
+# Matango.ai Local Development Environment
+# 
+# Usage:
+#   docker compose up -d        # Start services
+#   docker compose down         # Stop services
+#   docker compose logs -f      # View logs
+#
+# The MySQL database will be available at localhost:3306
+# Data persists in the ./docker-data/mysql directory
+
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: matango-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: matango
+      MYSQL_USER: matango
+      MYSQL_PASSWORD: matango_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker-data/mysql:/var/lib/mysql
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-ppassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  # Redis for job queues (optional, for production-like setup)
+  redis:
+    image: redis:7-alpine
+    container_name: matango-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./docker-data/redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Mailhog for local email testing (optional)
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: matango-mailhog
+    ports:
+      - "1025:1025"   # SMTP
+      - "8025:8025"   # Web UI
+    profiles:
+      - email
+
+# Named volumes for data persistence
+volumes:
+  mysql-data:
+  redis-data:

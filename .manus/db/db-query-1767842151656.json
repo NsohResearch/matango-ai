@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `analytics_data` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `influencerId` int NOT NULL,\n  `date` timestamp NOT NULL,\n  `followers` int NOT NULL DEFAULT 0,\n  `followersGain` int NOT NULL DEFAULT 0,\n  `likes` int NOT NULL DEFAULT 0,\n  `views` int NOT NULL DEFAULT 0,\n  `engagementRate` int NOT NULL DEFAULT 0,\n  `postsCount` int NOT NULL DEFAULT 0,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `analytics_data_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS `analytics_data` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `influencerId` int NOT NULL,\n  `date` timestamp NOT NULL,\n  `followers` int NOT NULL DEFAULT 0,\n  `followersGain` int NOT NULL DEFAULT 0,\n  `likes` int NOT NULL DEFAULT 0,\n  `views` int NOT NULL DEFAULT 0,\n  `engagementRate` int NOT NULL DEFAULT 0,\n  `postsCount` int NOT NULL DEFAULT 0,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `analytics_data_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 185
+}

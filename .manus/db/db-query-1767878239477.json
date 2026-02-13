@@ -1,0 +1,15 @@
+{
+  "query": "SELECT id, name, slug FROM system_influencers;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT id, name, slug FROM system_influencers;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Matango",
+      "slug": "matango-official"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\n1\tMatango\tmatango-official\n",
+  "stderr": "",
+  "execution_time_ms": 60
+}

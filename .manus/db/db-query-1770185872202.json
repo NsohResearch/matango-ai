@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `creator_projects` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `folderId` int,\n  `title` varchar(255) NOT NULL,\n  `description` text,\n  `thumbnailUrl` text,\n  `aspectRatio` enum('16:9','9:16','1:1','4:5') NOT NULL DEFAULT '16:9',\n  `resolution` enum('720p','1080p','4k') NOT NULL DEFAULT '1080p',\n  `frameRate` int NOT NULL DEFAULT 30,\n  `totalDuration` int NOT NULL DEFAULT 0,\n  `status` enum('draft','editing','rendering','completed','archived') NOT NULL DEFAULT 'draft',\n  `tags` json,\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT (now()),\n  `updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `creator_projects_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS `creator_projects` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `folderId` int,\n  `title` varchar(255) NOT NULL,\n  `description` text,\n  `thumbnailUrl` text,\n  `aspectRatio` enum('16:9','9:16','1:1','4:5') NOT NULL DEFAULT '16:9',\n  `resolution` enum('720p','1080p','4k') NOT NULL DEFAULT '1080p',\n  `frameRate` int NOT NULL DEFAULT 30,\n  `totalDuration` int NOT NULL DEFAULT 0,\n  `status` enum('draft','editing','rendering','completed','archived') NOT NULL DEFAULT 'draft',\n  `tags` json,\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT (now()),\n  `updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `creator_projects_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 116
+}

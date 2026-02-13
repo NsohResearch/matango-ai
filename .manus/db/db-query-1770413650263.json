@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as cnt FROM influencer_training_jobs;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT COUNT(*) as cnt FROM influencer_training_jobs;",
+  "rows": [
+    {
+      "cnt": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "cnt\n0\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}

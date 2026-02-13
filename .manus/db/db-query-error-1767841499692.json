@@ -1,0 +1,8 @@
+{
+  "query": "CREATE TABLE `influencer_content` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`influencerId` int NOT NULL,\n\t`imageUrl` text NOT NULL,\n\t`prompt` text,\n\t`contentType` enum('avatar','post','story') NOT NULL DEFAULT 'post',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `influencer_content_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE `influencer_content` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`influencerId` int NOT NULL,\n\t`imageUrl` text NOT NULL,\n\t`prompt` text,\n\t`contentType` enum('avatar','post','story') NOT NULL DEFAULT 'post',\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `influencer_content_id` PRIMARY KEY(`id`)\n);",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1050 (42S01) at line 1: Table 'gA8vzQof3xQthSrsih8mv2.influencer_content' already exists"
+  ]
+}

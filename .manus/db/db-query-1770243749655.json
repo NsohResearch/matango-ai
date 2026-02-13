@@ -1,0 +1,19 @@
+{
+  "query": "SELECT TABLE_NAME FROM information_schema.tables WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME LIKE 'account%' OR TABLE_NAME LIKE 'billing_pause%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT TABLE_NAME FROM information_schema.tables WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME LIKE 'account%' OR TABLE_NAME LIKE 'billing_pause%';",
+  "rows": [
+    {
+      "TABLE_NAME": "account_lifecycle_events"
+    },
+    {
+      "TABLE_NAME": "account_deletion_requests"
+    },
+    {
+      "TABLE_NAME": "billing_pause_records"
+    }
+  ],
+  "messages": [],
+  "stdout": "TABLE_NAME\naccount_lifecycle_events\naccount_deletion_requests\nbilling_pause_records\n",
+  "stderr": "",
+  "execution_time_ms": 137
+}

@@ -1,0 +1,9 @@
+{
+  "query": "\nALTER TABLE users \nADD COLUMN accountStatus ENUM('ACTIVE', 'DEACTIVATED', 'SUSPENDED', 'SOFT_DELETED_90D', 'RETENTION_12M', 'HARD_DELETED') NOT NULL DEFAULT 'ACTIVE',\nADD COLUMN deletedAt TIMESTAMP NULL,\nADD COLUMN deletedBy INT NULL,\nADD COLUMN deletionReason TEXT NULL,\nADD COLUMN recoveryDeadline TIMESTAMP NULL,\nADD COLUMN retentionUntil TIMESTAMP NULL,\nADD COLUMN hardDeletedAt TIMESTAMP NULL;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute \nALTER TABLE users \nADD COLUMN accountStatus ENUM('ACTIVE', 'DEACTIVATED', 'SUSPENDED', 'SOFT_DELETED_90D', 'RETENTION_12M', 'HARD_DELETED') NOT NULL DEFAULT 'ACTIVE',\nADD COLUMN deletedAt TIMESTAMP NULL,\nADD COLUMN deletedBy INT NULL,\nADD COLUMN deletionReason TEXT NULL,\nADD COLUMN recoveryDeadline TIMESTAMP NULL,\nADD COLUMN retentionUntil TIMESTAMP NULL,\nADD COLUMN hardDeletedAt TIMESTAMP NULL;\n",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2336
+}

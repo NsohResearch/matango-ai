@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `auto_insights` (\n  `id` int AUTO_INCREMENT PRIMARY KEY,\n  `organizationId` int NOT NULL,\n  `insightType` enum('winning_angle','underperforming_persona','channel_recommendation','hook_refresh','claim_revision','next_best_action') NOT NULL,\n  `title` varchar(200) NOT NULL,\n  `description` text NOT NULL,\n  `actionable` text,\n  `relatedCampaignId` int,\n  `relatedPersonaId` int,\n  `confidence` int NOT NULL DEFAULT 0,\n  `isActioned` boolean NOT NULL DEFAULT false,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS `auto_insights` (\n  `id` int AUTO_INCREMENT PRIMARY KEY,\n  `organizationId` int NOT NULL,\n  `insightType` enum('winning_angle','underperforming_persona','channel_recommendation','hook_refresh','claim_revision','next_best_action') NOT NULL,\n  `title` varchar(200) NOT NULL,\n  `description` text NOT NULL,\n  `actionable` text,\n  `relatedCampaignId` int,\n  `relatedPersonaId` int,\n  `confidence` int NOT NULL DEFAULT 0,\n  `isActioned` boolean NOT NULL DEFAULT false,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 187
+}

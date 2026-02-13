@@ -1,0 +1,8 @@
+{
+  "query": "ALTER TABLE business_dna \nADD COLUMN brandName VARCHAR(200) AFTER productName,\nADD COLUMN status ENUM('draft', 'active', 'archived') DEFAULT 'active' NOT NULL AFTER completionScore,\nADD COLUMN createdByUserId INT AFTER userId,\nADD COLUMN tags JSON AFTER status,\nADD INDEX idx_org_status (organizationId, status),\nADD INDEX idx_org_brandname (organizationId, brandName);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute ALTER TABLE business_dna \nADD COLUMN brandName VARCHAR(200) AFTER productName,\nADD COLUMN status ENUM('draft', 'active', 'archived') DEFAULT 'active' NOT NULL AFTER completionScore,\nADD COLUMN createdByUserId INT AFTER userId,\nADD COLUMN tags JSON AFTER status,\nADD INDEX idx_org_status (organizationId, status),\nADD INDEX idx_org_brandname (organizationId, brandName);",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'status' in 'business_dna'"
+  ]
+}

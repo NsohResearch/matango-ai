@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS influencer_settings (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  influencerId INT NOT NULL UNIQUE,\n  characterWeight INT DEFAULT 80 NOT NULL,\n  keepOutfit BOOLEAN DEFAULT FALSE NOT NULL,\n  defaultStyle ENUM('realistic', 'anime', 'artistic', '3d') DEFAULT 'realistic' NOT NULL,\n  referenceImages JSON,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS influencer_settings (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  influencerId INT NOT NULL UNIQUE,\n  characterWeight INT DEFAULT 80 NOT NULL,\n  keepOutfit BOOLEAN DEFAULT FALSE NOT NULL,\n  defaultStyle ENUM('realistic', 'anime', 'artistic', '3d') DEFAULT 'realistic' NOT NULL,\n  referenceImages JSON,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 189
+}

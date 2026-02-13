@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `leads` (\n  `id` int AUTO_INCREMENT PRIMARY KEY,\n  `organizationId` int NOT NULL,\n  `campaignId` int,\n  `assetId` int,\n  `email` varchar(320) NOT NULL,\n  `name` varchar(200),\n  `company` varchar(200),\n  `role` varchar(100),\n  `source` varchar(100),\n  `utmSource` varchar(100),\n  `utmMedium` varchar(100),\n  `utmCampaign` varchar(100),\n  `stage` enum('new','contacted','qualified','proposal','negotiation','won','lost') NOT NULL DEFAULT 'new',\n  `notes` text,\n  `lastContactedAt` timestamp,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS `leads` (\n  `id` int AUTO_INCREMENT PRIMARY KEY,\n  `organizationId` int NOT NULL,\n  `campaignId` int,\n  `assetId` int,\n  `email` varchar(320) NOT NULL,\n  `name` varchar(200),\n  `company` varchar(200),\n  `role` varchar(100),\n  `source` varchar(100),\n  `utmSource` varchar(100),\n  `utmMedium` varchar(100),\n  `utmCampaign` varchar(100),\n  `stage` enum('new','contacted','qualified','proposal','negotiation','won','lost') NOT NULL DEFAULT 'new',\n  `notes` text,\n  `lastContactedAt` timestamp,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 195
+}

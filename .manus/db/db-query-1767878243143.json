@@ -1,0 +1,27 @@
+{
+  "query": "SELECT * FROM system_influencers LIMIT 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT * FROM system_influencers LIMIT 1;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Matango",
+      "slug": "matango-official",
+      "genderPresentation": "Female",
+      "ageAppearance": "28-35",
+      "ethnicity": "Global-neutral",
+      "aesthetic": "Minimal, modern, calm, authoritative",
+      "personaDescription": "Founder-level authority. Systems thinker, not a marketer. Calm, confident, composed. Never hype, never salesy. Speaks with inevitability, not persuasion.",
+      "voiceTraits": "[\"Founder-level authority\", \"Systems thinker\", \"Calm and confident\", \"Composed demeanor\", \"Never hype\", \"Never salesy\", \"Speaks with inevitability\"]",
+      "behavioralConstraints": "[\"Short, declarative sentences\", \"Strategic pauses\", \"Minimal gestures\", \"Neutral to slight knowing smile\", \"No buzzwords unless clearly defined\"]",
+      "cameraRules": "{\"background\": \"Neutral or dark background\", \"framing\": \"Chest-up framing\", \"lighting\": \"Soft, even lighting\", \"motion\": \"No flashy motion, no influencer tropes\", \"overlays\": \"Minimal UI overlays (show flow, not features)\"}",
+      "avatarUrl": "NULL",
+      "isActive": "1",
+      "createdAt": "2026-01-08 11:42:52",
+      "updatedAt": "2026-01-08 11:42:52"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\tgenderPresentation\tageAppearance\tethnicity\taesthetic\tpersonaDescription\tvoiceTraits\tbehavioralConstraints\tcameraRules\tavatarUrl\tisActive\tcreatedAt\tupdatedAt\n1\tMatango\tmatango-official\tFemale\t28-35\tGlobal-neutral\tMinimal, modern, calm, authoritative\tFounder-level authority. Systems thinker, not a marketer. Calm, confident, composed. Never hype, never salesy. Speaks with inevitability, not persuasion.\t[\"Founder-level authority\", \"Systems thinker\", \"Calm and confident\", \"Composed demeanor\", \"Never hype\", \"Never salesy\", \"Speaks with inevitability\"]\t[\"Short, declarative sentences\", \"Strategic pauses\", \"Minimal gestures\", \"Neutral to slight knowing smile\", \"No buzzwords unless clearly defined\"]\t{\"background\": \"Neutral or dark background\", \"framing\": \"Chest-up framing\", \"lighting\": \"Soft, even lighting\", \"motion\": \"No flashy motion, no influencer tropes\", \"overlays\": \"Minimal UI overlays (show flow, not features)\"}\tNULL\t1\t2026-01-08 11:42:52\t2026-01-08 11:42:52\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

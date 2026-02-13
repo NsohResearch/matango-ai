@@ -1,0 +1,19 @@
+{
+  "query": "SELECT \n  (SELECT COUNT(*) FROM influencers) as influencer_count,\n  (SELECT COUNT(*) FROM influencer_generations) as generation_count,\n  (SELECT COUNT(*) FROM video_gen_jobs_v2) as video_job_count,\n  (SELECT COUNT(*) FROM campaigns) as campaign_count,\n  (SELECT COUNT(*) FROM leads) as lead_count,\n  (SELECT COUNT(*) FROM media_objects) as media_count,\n  (SELECT COUNT(*) FROM workflow_sessions) as session_count;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT \n  (SELECT COUNT(*) FROM influencers) as influencer_count,\n  (SELECT COUNT(*) FROM influencer_generations) as generation_count,\n  (SELECT COUNT(*) FROM video_gen_jobs_v2) as video_job_count,\n  (SELECT COUNT(*) FROM campaigns) as campaign_count,\n  (SELECT COUNT(*) FROM leads) as lead_count,\n  (SELECT COUNT(*) FROM media_objects) as media_count,\n  (SELECT COUNT(*) FROM workflow_sessions) as session_count;",
+  "rows": [
+    {
+      "influencer_count": "4",
+      "generation_count": "3",
+      "video_job_count": "2",
+      "campaign_count": "0",
+      "lead_count": "0",
+      "media_count": "8",
+      "session_count": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "influencer_count\tgeneration_count\tvideo_job_count\tcampaign_count\tlead_count\tmedia_count\tsession_count\n4\t3\t2\t0\t0\t8\t0\n",
+  "stderr": "",
+  "execution_time_ms": 62
+}

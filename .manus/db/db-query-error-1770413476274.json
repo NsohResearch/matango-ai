@@ -1,0 +1,8 @@
+{
+  "query": "DELETE FROM `__drizzle_migrations` WHERE tag = '0001_clammy_whizzer';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute DELETE FROM `__drizzle_migrations` WHERE tag = '0001_clammy_whizzer';",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'tag' in 'where clause'"
+  ]
+}

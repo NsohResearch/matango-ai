@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `chat_messages` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `influencerId` int NOT NULL,\n  `userId` int NOT NULL,\n  `role` enum('user','assistant') NOT NULL,\n  `content` text NOT NULL,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `chat_messages_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS `chat_messages` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `influencerId` int NOT NULL,\n  `userId` int NOT NULL,\n  `role` enum('user','assistant') NOT NULL,\n  `content` text NOT NULL,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `chat_messages_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 229
+}

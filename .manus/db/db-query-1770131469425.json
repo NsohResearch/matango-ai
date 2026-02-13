@@ -1,0 +1,24 @@
+{
+  "query": "SELECT * FROM influencers LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT * FROM influencers LIMIT 10;",
+  "rows": [
+    {
+      "id": "1",
+      "userId": "1",
+      "name": "Dr. J",
+      "age": "NULL",
+      "bio": "Professor",
+      "personality": "NULL",
+      "avatarUrl": "https://d2xsxph8kpxj0f.cloudfront.net/93518399/gA8vzQof3xQthSrsih8mv2/influencers/1/1/avatar-rSDKDnv1dPNzUHF8MS7U8.png",
+      "tags": "[]",
+      "stats": "NULL",
+      "isPublic": "0",
+      "createdAt": "2026-01-08 09:28:47",
+      "updatedAt": "2026-01-08 09:30:28"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\tname\tage\tbio\tpersonality\tavatarUrl\ttags\tstats\tisPublic\tcreatedAt\tupdatedAt\n1\t1\tDr. J\tNULL\tProfessor\tNULL\thttps://d2xsxph8kpxj0f.cloudfront.net/93518399/gA8vzQof3xQthSrsih8mv2/influencers/1/1/avatar-rSDKDnv1dPNzUHF8MS7U8.png\t[]\tNULL\t0\t2026-01-08 09:28:47\t2026-01-08 09:30:28\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

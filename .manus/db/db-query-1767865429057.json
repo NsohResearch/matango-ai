@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS campaign_scenes (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  campaignId INT NOT NULL,\n  sceneOrder INT NOT NULL,\n  prompt TEXT NOT NULL,\n  caption TEXT,\n  imageUrl TEXT,\n  platform ENUM('instagram', 'tiktok', 'twitter', 'youtube'),\n  scheduledFor TIMESTAMP,\n  status ENUM('pending', 'generating', 'completed', 'published') DEFAULT 'pending' NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS campaign_scenes (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  campaignId INT NOT NULL,\n  sceneOrder INT NOT NULL,\n  prompt TEXT NOT NULL,\n  caption TEXT,\n  imageUrl TEXT,\n  platform ENUM('instagram', 'tiktok', 'twitter', 'youtube'),\n  scheduledFor TIMESTAMP,\n  status ENUM('pending', 'generating', 'completed', 'published') DEFAULT 'pending' NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 192
+}

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `influencer_personas` (\n  `id` int AUTO_INCREMENT PRIMARY KEY,\n  `organizationId` int NOT NULL,\n  `userId` int NOT NULL,\n  `name` varchar(100) NOT NULL,\n  `personaType` enum('founder','practitioner','analyst','custom') NOT NULL DEFAULT 'custom',\n  `styleGuide` text,\n  `vocabulary` json,\n  `tabooList` json,\n  `hookPatterns` json,\n  `ctaPatterns` json,\n  `avatarUrl` text,\n  `referenceImages` json,\n  `characterWeight` int NOT NULL DEFAULT 80,\n  `isActive` boolean NOT NULL DEFAULT true,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS `influencer_personas` (\n  `id` int AUTO_INCREMENT PRIMARY KEY,\n  `organizationId` int NOT NULL,\n  `userId` int NOT NULL,\n  `name` varchar(100) NOT NULL,\n  `personaType` enum('founder','practitioner','analyst','custom') NOT NULL DEFAULT 'custom',\n  `styleGuide` text,\n  `vocabulary` json,\n  `tabooList` json,\n  `hookPatterns` json,\n  `ctaPatterns` json,\n  `avatarUrl` text,\n  `referenceImages` json,\n  `characterWeight` int NOT NULL DEFAULT 80,\n  `isActive` boolean NOT NULL DEFAULT true,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 187
+}

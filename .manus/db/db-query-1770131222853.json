@@ -1,0 +1,19 @@
+{
+  "query": "SELECT u.id, u.email, u.plan, o.id as org_id, o.name as org_name, o.plan as org_plan, o.maxBrands \nFROM users u \nLEFT JOIN organizations o ON o.ownerId = u.id \nWHERE u.email = 'jovitansoh@gmail.com';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT u.id, u.email, u.plan, o.id as org_id, o.name as org_name, o.plan as org_plan, o.maxBrands \nFROM users u \nLEFT JOIN organizations o ON o.ownerId = u.id \nWHERE u.email = 'jovitansoh@gmail.com';",
+  "rows": [
+    {
+      "id": "1",
+      "email": "jovitansoh@gmail.com",
+      "plan": "agency_plus",
+      "org_id": "1",
+      "org_name": "My Organization",
+      "org_plan": "free",
+      "maxBrands": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\temail\tplan\torg_id\torg_name\torg_plan\tmaxBrands\n1\tjovitansoh@gmail.com\tagency_plus\t1\tMy Organization\tfree\t1\n",
+  "stderr": "",
+  "execution_time_ms": 77
+}

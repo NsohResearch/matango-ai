@@ -1,0 +1,8 @@
+{
+  "query": "CREATE TABLE `influencers` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`name` varchar(100) NOT NULL,\n\t`age` int,\n\t`bio` text,\n\t`personality` text,\n\t`avatarUrl` text,\n\t`tags` json,\n\t`stats` json,\n\t`isPublic` boolean NOT NULL DEFAULT false,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `influencers_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE `influencers` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`userId` int NOT NULL,\n\t`name` varchar(100) NOT NULL,\n\t`age` int,\n\t`bio` text,\n\t`personality` text,\n\t`avatarUrl` text,\n\t`tags` json,\n\t`stats` json,\n\t`isPublic` boolean NOT NULL DEFAULT false,\n\t`createdAt` timestamp NOT NULL DEFAULT (now()),\n\t`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,\n\tCONSTRAINT `influencers_id` PRIMARY KEY(`id`)\n);",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1050 (42S01) at line 1: Table 'gA8vzQof3xQthSrsih8mv2.influencers' already exists"
+  ]
+}

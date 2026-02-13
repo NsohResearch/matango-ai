@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS notification_preferences (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  userId INT NOT NULL UNIQUE,\n  emailEnabled BOOLEAN DEFAULT TRUE NOT NULL,\n  scheduledPostPublished BOOLEAN DEFAULT TRUE NOT NULL,\n  followerMilestones BOOLEAN DEFAULT TRUE NOT NULL,\n  weeklyReport BOOLEAN DEFAULT TRUE NOT NULL,\n  teamInvitations BOOLEAN DEFAULT TRUE NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute CREATE TABLE IF NOT EXISTS notification_preferences (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  userId INT NOT NULL UNIQUE,\n  emailEnabled BOOLEAN DEFAULT TRUE NOT NULL,\n  scheduledPostPublished BOOLEAN DEFAULT TRUE NOT NULL,\n  followerMilestones BOOLEAN DEFAULT TRUE NOT NULL,\n  weeklyReport BOOLEAN DEFAULT TRUE NOT NULL,\n  teamInvitations BOOLEAN DEFAULT TRUE NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 324
+}

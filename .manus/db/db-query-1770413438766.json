@@ -1,0 +1,19 @@
+{
+  "query": "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME IN ('influencer_images', 'media_objects', 'video_gen_jobs_v2', 'influencer_training_jobs') ORDER BY TABLE_NAME;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4PXYmKMmcm72RRu.5b37f564094d --database gA8vzQof3xQthSrsih8mv2 --execute SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME IN ('influencer_images', 'media_objects', 'video_gen_jobs_v2', 'influencer_training_jobs') ORDER BY TABLE_NAME;",
+  "rows": [
+    {
+      "TABLE_NAME": "influencer_images"
+    },
+    {
+      "TABLE_NAME": "media_objects"
+    },
+    {
+      "TABLE_NAME": "video_gen_jobs_v2"
+    }
+  ],
+  "messages": [],
+  "stdout": "TABLE_NAME\ninfluencer_images\nmedia_objects\nvideo_gen_jobs_v2\n",
+  "stderr": "",
+  "execution_time_ms": 61
+}
